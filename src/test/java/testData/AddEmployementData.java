@@ -11,8 +11,8 @@ public class AddEmployementData extends ExcelUtil {
     @DataProvider(name ="OrangeHRMLogin")
     public Object[][] OrangeHRMLogin() {
 
-        int rows = getRowCount("AddEmployementData ");
-        int col = getColumnCount("AddEmployementData ");
+        int rows = getRowCount("AddEmployementData");
+        int col = getColumnCount("AddEmployementData");
 
 
         LOGGER.info("row = "+ rows + " columns = "+ col);
@@ -20,7 +20,7 @@ public class AddEmployementData extends ExcelUtil {
         Object[][] data = new Object[rows][col];
         for (int i = 1; i <= rows; i++) {
             for (int j = 0; j < col; j++) {
-                data[i - 1][j] = getData("AddEmployementData ", i, j);
+                data[i - 1][j] = getData("AddEmployementData", i, j);
             }
         }
         return data;

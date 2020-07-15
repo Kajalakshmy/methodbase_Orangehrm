@@ -13,6 +13,15 @@ public class AddEmployementStatus extends PageBase {
         MethodBase.click_ByXpath("//*[@id=\"menu_admin_viewAdminModule\"]/b");
     }
 
+
+    public static boolean isDashBoardDisplay() {
+        return MethodBase.isDisplayed_ById("menu_dashboard_index");
+
+    }
+    public static boolean isEmployementstatusDisplay() {
+        return MethodBase.isDisplayed_ByXpath("//*[@id=\"search-results\"]/div[1]/h1");
+    }
+
         public static void clickJob() {
             MethodBase.click_ByXpath("//*[@id=\"menu_admin_Job\"]");
 
@@ -27,7 +36,7 @@ public class AddEmployementStatus extends PageBase {
 
     }
 
-        public static void setName(){
+        public static void setName(String empStatus_name){
         MethodBase.setText_ByID("empStatus_name");
     }
 
@@ -38,6 +47,7 @@ public class AddEmployementStatus extends PageBase {
         public static void cancel(){
         MethodBase.click_ByXpath("//*[@id=\"btnCancel\"]");
         }
+
 
 
 }
